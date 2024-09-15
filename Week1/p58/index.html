@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 소개</title>
+    
+    <style>
+        body {
+            width: 80vw;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            cursor: pointer;
+        }
+        .pic {
+            width: 80vw;
+            height: 90vh;
+            object-fit: cover;
+        }
+        strong {
+            font-size: 1.2rem;
+            color: #a45500;
+        }
+    </style>
+    <script>
+        function show() {
+            document.getElementById('mypic').src = './src/pic.jpg';
+            document.getElementById('mypic').className = 'pic';
+        }
+        function hide() {
+            document.getElementById('mypic').src = '';
+            document.getElementById('mypic').className = '';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1
+            onmouseenter="show()"
+            onmouseleave="hide()"
+        >성현욱</h1>
+        <hr>
+    </header>
+    <img id='mypic' src=''>
+    <article>저는 2002년 9월 5일 경남 창원에서 태어나서 소프트웨어공학을 전공하는 학생입니다.
+        제가 제일 좋아하는 과목은 <strong>웹 프로그래밍</strong>이고, 그 중에서도 <strong>자바스크립트</strong>를 가장 좋아합니다.</article>
+</body>
+</html>
