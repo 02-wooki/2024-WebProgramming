@@ -4,32 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>과제 페이지</title>
-    <style>
-        ul {
-            list-style-type: none;
-            
-            border: 1px solid #ddd;
-            padding: 25px;
-
-            height: 150px;  width: 60vw;
-            margin: auto;
-
-            border-radius: 20px;
-        }
-        ul > li {
-            font-weight: bold;
-        }
-        ul > li > a {
-            height: 50px; width: 50vw;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <ul>
-        <li><h3>9월 10일</h3>
-        <a href="./Week1/p58/index.html">자기소개html 페이지</a> <br>
-        <a href="./Week1/p104/index.html">컴퓨터 정보 html 페이지</a>
+    <nav>
+        <h3>바로가기</h3>
+        <ul class="linkList">
+            <li><a href="#0910">9월 10일</a></li>
+            <li><a href="#0924">9월 24일</a></li>
+        </ul>
+    </nav>
+    <ul class="pageList">
+        <li>
+            <h3 id="0910">9월 10일</h3>
+            <div class="contentsContainer">
+                <div>
+                    <a href="./Week1/p58/index.html">자기소개html 페이지</a>
+                </div>
+                <div>
+                    <a href="./Week1/p104/index.html">컴퓨터 정보 html 페이지</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <h3 id="0924">9월 24일</h3>
+            
         </li>
     </ul>
+    <nav>
+
+    </nav>
 </body>
 </html>
