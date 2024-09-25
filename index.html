@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>과제 페이지</title>
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
-<body>
+<body class="lightThemeMainBgColor">
     <nav>
         <h3>바로가기</h3>
-        <ul class="linkList">
+        <ul class="contentsContainer">
             <li><a href="#0910">9월 10일</a></li>
             <li><a href="#0924">9월 24일</a></li>
         </ul>
@@ -31,8 +32,21 @@
             
         </li>
     </ul>
-    <nav>
-
+    <sidebar>
+        <button
+            id="imgbutton"
+            class="darkmodeToggle"
+            title="다크 모드 켜기/끄가"
+            onclick="darkmode()"
+        ></button>
+        <a href="https://github.com/02-wooki/2024-WebProgramming">
+            <button
+                id="imgbutton"
+                class="githubButton"
+                title="깃허브 페이지"
+                >
+            </button>
+        </a>
     </nav>
 </body>
 </html>
