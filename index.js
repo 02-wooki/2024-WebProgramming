@@ -1,16 +1,19 @@
 function darkmode() {
 
-    const themeButton = document.getElementById('imgbutton');
+    const themeButton = document.getElementsByClassName('imgbutton');
     const backgrounds = document.getElementsByTagName('body');
     const subBackgrounds = document.getElementsByClassName('contentsContainer');
     const maincolors = document.getElementsByTagName('a');
     const titles = document.getElementsByTagName('h3');
 
-    if (themeButton.className==='darkmodeToggle') {
-        themeButton.className='lightmodeToggle';
-    } else {
-        themeButton.className='darkmodeToggle';
-    }
+    console.log(themeButton[0]);
+    console.log(themeButton[1]);
+
+    themeButton[0].classList.toggle('darkmodeToggle');
+    themeButton[0].classList.toggle('lightmodeToggle');
+
+    themeButton[1].classList.toggle('githubButton');
+    themeButton[1].classList.toggle('githubLightButton');
 
     for(i = 0; i < backgrounds.length; i++)
         backgrounds[i].classList.toggle('darkThemeMainBgColor');

@@ -45,6 +45,7 @@ nav > .contentsContainer {
 .contentsContainer {
     border-radius: 20px;
     box-shadow: 0px 0px 15px -12px black;
+    margin-bottom: 15px;
 }
 
 .contentsContainer > div {
@@ -65,14 +66,14 @@ sidebar {
     flex-direction: column;
 }
 
-#imgbutton {
+.imgbutton {
     margin: 10px;
     width: 35px;   height: 35px;
 
     border: none;
     border-radius: 20px;
 }
-#imgbutton:hover {
+.imgbutton:hover {
     cursor: pointer;
 }
 .darkmodeToggle {
@@ -86,6 +87,10 @@ sidebar {
 
 .githubButton {
     background: url("./src/githubCI.png") no-repeat;
+    background-size: contain;
+}
+.githubLightButton {
+    background: url("./src/githubLightCI.png") no-repeat;
     background-size: contain;
 }
 
