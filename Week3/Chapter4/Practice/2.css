@@ -1,0 +1,11 @@
+body {
+    background-color: aliceblue;
+}
+
+p {
+    color: brown;
+}
+p > span {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
