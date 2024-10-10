@@ -1,0 +1,17 @@
+h3 { 
+    text-align: right;
+}
+
+body {
+    background-color: antiquewhite;
+}
+hr {
+    border: solid 1px burlywood;
+}
+
+p {
+    color: blueviolet;
+}
+p > span {
+    background-color: cadetblue;
+}
