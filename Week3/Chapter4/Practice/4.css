@@ -1,0 +1,18 @@
+.main {
+    background-color: cadetblue;
+}
+
+.headline {
+    font-size: 2rem;
+    text-align: center;
+    color: brown;
+}
+
+p.help {
+    font-size: 2rem;
+    color: red;
+}
+
+#hot {
+    background-color: red;
+}
