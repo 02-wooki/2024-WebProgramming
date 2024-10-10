@@ -1,0 +1,30 @@
+body {
+    width: 500px;   height: 100vh;
+    display: flex;  flex-direction: column;
+    justify-content: center;
+
+    margin: auto;
+}
+form {
+    background-color: aliceblue;
+    padding: 0px 20px;
+    border-radius: 20px;
+}
+fieldset {
+    border: none;
+}
+section {
+    margin: 20px 0px;
+}
+
+form > section {
+    font-weight: bold;
+}
+label:not(:only-of-type) {
+    font-weight: normal;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
