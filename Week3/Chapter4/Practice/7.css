@@ -1,0 +1,13 @@
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    width: 45vw;
+}
+img:hover {
+    content: url("https://i.namu.wiki/i/WDWEcuDEKaQXQ7KfH4PgZ210PQidn118s4BKBarwN8WFpH7CffPGsCRNGEjF4WNZgWMeBviLoXvPPU8DKaMpzRDYFJ9M4ZPqcpQqLSrHohtoL-N2d7J5JdSsW5PqWZlq1PkKa0V3hlpLQs-QWGsQ1A.png");
+}
