@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>월화수목금토일</title>
+    <script>
+        function workday(chicken) {
+            document.write(chicken);
+            switch (chicken) {
+                case '월':
+                case '목':
+                case '금':
+                    document.write(`은 출근`)
+                    return;
+                case '화':
+                case '수':
+                    document.write(`는 출근`)
+                    return;
+                case '토':
+                    document.write('는 휴일')
+                    return;
+                case '일':
+                    document.write(`은 휴일`)
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>월화수목금토일</h3>
+    <hr>
+    <script>
+        workday(prompt('월화수목금토일 중에서 입력하세요'))
+    </script>
+</body>
+</html>
