@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document.write()</title>
+    <style>
+        table, td, th {
+            border: 1px solid black;
+        }
+        td, th {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Document.write()로 표 만들기</h3>
+    <hr>
+    <script>
+        var table = '<table id="myTable">'
+        
+        for (row = 0; row < 2; row++) {
+            table += '<tr>'
+            if (row === 0)
+                table += '<th>n</th>'
+            else 
+                table += '<th>n<sup>2</sup></th>'
+
+            for (col = 0; col < 10; col++)
+                table += `<td>${col}</td>`
+
+            table += '</tr>'
+        }
+        table += '</table>'
+
+        document.write(table)
+    </script>
+</body>
+</html>
