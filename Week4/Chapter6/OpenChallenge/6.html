@@ -6,7 +6,7 @@
     <title>별 문자 출력하기</title>
     <script>
         function printStar(stars) {
-            if (isNaN(stars) === false && Number.isInteger(parseFloat(stars))) {
+            if (isNaN(stars) === false && Number.isInteger(parseFloat(stars)) && parseInt(stars) >= 0) {
                 stars = parseInt(stars)
 
                 for (i = 1; i <= stars; i++) {
