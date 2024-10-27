@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17개의 CSS2 색이름과 색</title>
+</head>
+<body>
+    <h3>17개의 CSS2 색이름과 색</h3>
+    <hr>
+    <script>
+        let colorNames = ["maroon", "red", "orange", "yellow", "olive", "purple", "fuchsia", "white", "Lime", "green", "navy", "blue" , "aqua", "teal", "black", "silver", "gray"];
+        colorNames.forEach(e => {
+            document.write(`<div id='${e}'>${e}</div>`);
+            const div = document.getElementById(e);
+            div.style.display = "inline-block";
+            div.style.width = '60px';
+            div.style.padding = '10px';
+            div.style.backgroundColor = e;
+        });
+    </script>
+</body>
+</html>
