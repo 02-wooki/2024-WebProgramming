@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math.random()으로 랜덤한 색 만들기</title>
+</head>
+<body>
+    <h3>16개의 랜덤한 색 만들기</h3>
+    <hr>
+    <script>
+        for (let i = 0; i < 16; i++) {
+            let color = new Object();
+            color.r = Math.floor(Math.random() * 256);
+            color.g = Math.floor(Math.random() * 256);
+            color.b = Math.floor(Math.random() * 256);
+
+            document.write(`<div id='color${i}'></div>`);
+            const div = document.getElementById(`color${i}`);
+            div.style.display = 'inline-block';
+            div.style.width = '150px';
+            div.style.padding = '10px';
+            div.style.backgroundColor = `rgb(${color.r}, ${color.g}, ${color.b})`;
+            div.innerText = `rgb(${color.r}, ${color.g}, ${color.b})`;
+        }
+    </script>
+</body>
+</html>
