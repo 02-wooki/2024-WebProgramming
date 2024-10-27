@@ -25,7 +25,9 @@
         document.write(`제일 큰 수는 ${big}`)
 
         document.write("<hr>")
-        n.sort()
+        n.sort((a, b) => {
+            return a - b;
+        });
         n.forEach(e => {
             document.write(`${e} `)
         });
