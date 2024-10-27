@@ -6,7 +6,7 @@
     <title>별 문자 출력하기</title>
     <script>
         function printStar(stars) {
-            if (isNaN(stars) === false && Number.isInteger(stars) === true) {
+            if (isNaN(stars) === false && Number.isInteger(parseFloat(stars))) {
                 stars = parseInt(stars)
 
                 for (i = 1; i <= stars; i++) {
@@ -24,6 +24,6 @@
 <body>
     <h3>별 문자 출력하기</h3>
     <hr>
-    <div><script>printStar(prompt('정수를 입력하세요'));</script></div>
+    <div><script>printStar(prompt('정수를 입력하세요').trim());</script></div>
 </body>
 </html>
