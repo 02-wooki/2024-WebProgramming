@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book 객체 배열 만들기</title>
+</head>
+<body>
+    <h3>book 객체 배열 만들기</h3>
+    <hr>
+    <script>
+
+        function expensive(books) {
+            let maxPrice = -1;
+            let maxTitle = '';
+
+            for (let i = 0; i < books.length; i++) {
+                if (maxPrice < books[i].price) {
+                    maxPrice = books[i].price;
+                    maxTitle = books[i].title;
+                }
+            }
+
+            return maxTitle;
+        }
+
+        let books = new Array();
+        for(let i = 0; i < 5; i++) {
+            props = prompt("콤마로 분리하면서 제목 저자 가격 순으로 입력").split(",")
+            books.push({
+                title: props[0].trim(),
+                author: props[1].trim(),
+                price: parseInt(props[2].trim()),
+                toString: function () {
+                    return `${this.title}, ${this.author}, ${this.price}`
+                }
+            })
+        }
+
+        for(let i = 0; i < 5; i++) {
+            let book = books[i];
+            document.write(`${book.toString()} <br>`);
+        }
+
+        document.write('<hr>');
+        document.write(`가장 가격이 비싼 책은 ${expensive(books)}`);
+    </script>
+</body>
+</html>
