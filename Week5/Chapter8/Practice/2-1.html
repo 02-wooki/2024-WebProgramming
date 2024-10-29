@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 트리</title>
+    <script>
+        function clickHandler() {
+            const img = document.getElementsByTagName("img")[0];
+            img.classList.toggle("zoomed");
+        }
+    </script>
+    <style>
+        img {
+            width: 100vw;
+            cursor: zoom-in;
+        }
+        .zoomed {
+            width: max-content;
+            cursor: zoom-out;
+        }
+    </style>
+</head>
+<body>
+    <img onclick="clickHandler()" src="/src/domTree2.png" alt="">
+</body>
+</html>
