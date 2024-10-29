@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라면 맛있게 끓이기 DOM트리</title>
+    <script>
+        function zoom() {
+            const img = document.getElementById("image");
+            img.classList.toggle("zoomed");
+        }
+    </script>
+    <style>
+        img {
+            width: 100vw;
+            cursor: zoom-in;
+        }
+        .zoomed {
+            width: max-content;
+            cursor: zoom-out;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" src="/src/domTree.png" onclick="zoom()">
+</body>
+</html>
