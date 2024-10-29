@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index 스타일 프로퍼티</title>
+</head>
+<body>
+    <h3>z-index 스타일 프로퍼티</h3>
+    <hr>
+    <div>
+        <img src="/src/spadeA.jpg" width="100px" height="140px" alt="스페이드 A" onclick="clickHandler(this)">
+        <img src="/src/spade2.jpg" width="100px" height="140px" alt="스페이드 2" onclick="clickHandler(this)">
+        <img src="/src/spade3.png" width="100px" height="140px" alt="스페이드 3" onclick="clickHandler(this)">
+        <img src="/src/spade7.jpeg" width="100px" height="140px" alt="스페이드 7" onclick="clickHandler(this)">
+    </div>
+    <script>
+        const imgs = document.getElementsByTagName("img");
+        for (let i = 0; i < imgs.length; i++) {
+            imgs[i].style.position='absolute';
+            imgs[i].style.left='50px';
+            imgs[i].style.top='100px'
+            imgs[i].style.zIndex=imgs.length - i - 1;
+            imgs[i].style.cursor='pointer';
+        }
+
+        function clickHandler(target) {
+            target.style.zIndex= target.style.zIndex - imgs.length;
+        }
+    </script>
+</body>
+</html>
