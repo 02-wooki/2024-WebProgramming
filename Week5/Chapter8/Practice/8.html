@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform/scale</title>
+    <script>
+        let expand = 1;
+        function clickHandler(target) {
+            target.style.transform=`scale(${++expand}, 1)`;
+        }
+    </script>
+</head>
+<body>
+    <h3>클릭하면 2, 3, 4배로 옆으로 늘어납니다.</h3>
+    <hr>
+    <img onclick="clickHandler(this)" style="width: 300px;" src="https://i.namu.wiki/i/izVXkClWRy9-s5DAkC_lGo3za4Zy9seGH1V6AM0qZJzsckE9eWe6-Hp-1OvJm_DkVv7BL7U0Ar7QB89ApaklkQ.webp" alt="">
+</body>
+</html>
