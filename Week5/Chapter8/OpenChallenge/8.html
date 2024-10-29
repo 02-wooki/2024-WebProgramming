@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>겜블링 게임</title>
+    <script>
+        let triggered = [false, false, false];
+        let number = [0, 0, 0];
+        const div = document.getElementsByClassName("num");
+
+        function rullet(target) {
+            // 난수 뽑기
+            if (!triggered[target]) {
+                triggered[target] = true;
+                let newnum = Math.floor(Math.random() * 10);
+
+                let i = 50;
+                let int = setInterval(() => {
+                    div[target].innerHTML = Math.floor(Math.random() * 10);
+                    i += 75;
+                }, i);
+                setTimeout(() => {
+                    clearInterval(int);
+                    number[target] = newnum;
+                    div[target].innerHTML = newnum;
+                }, 1500);
+            }
+            
+            // 조건 확인 후 결과 호출
+            if (triggered[0] && triggered[1] && triggered[2])
+                setTimeout(() => {
+                    printResult();
+                }, 1500);
+        }
+
+        function printResult() {
+            const result = document.getElementById("result");
+            if (number[0] === number[1] && number[1] === number[2])
+                result.innerHTML = 'Success(click here to do again)'
+            else
+                result.innerHTML = 'fail(click here to do again)'
+        }
+
+        function reset() {
+            const result = document.getElementById("result");
+            for (let i = 0; i < 3; i++) {
+                number[i] = 0;
+                div[i].innerHTML = '0';
+                triggered[i] = false;
+            }
+            result.innerHTML = '';
+        }
+    </script>
+    <style>
+        .appContainer {
+            width: 150px;  height: 70px;
+            display: flex;
+            border: 2px solid pink;
+            background-color: #fff2f2;
+            margin: 10px
+        }
+        .num {
+            width: 50px;    height: 50px;
+            font-size: 2em; font-weight: bold;
+            padding: 10px;
+            border-collapse: collapse;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        #result {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>겜블링 게임</h3>
+    <hr>
+    <div class="appContainer">
+        <div class="num" onclick="rullet(0)">0</div>
+        <div class="num" onclick="rullet(1)">0</div>
+        <div class="num" onclick="rullet(2)">0</div>
+    </div>
+    <div id="result" onclick="reset()"></div>
+</body>
+</html>
