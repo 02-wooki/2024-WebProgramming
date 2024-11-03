@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 클릭 연습</title>
+    <script>
+        function createTable() {
+            const table = document.getElementsByTagName('table')[0];
+            const tbody = document.createElement('tbody');
+
+            let initRow = Math.floor(Math.random() * 10);
+            let initCol = Math.floor(Math.random() * 10);
+
+            // 테이블 생성
+            for (let i = 0; i < 10; i++) {
+                const tr = document.createElement('tr');
+                for (let j = 0; j < 10; j++) {
+                    const td = document.createElement('td');
+                    const img = document.createElement('img');
+                    td.appendChild(img);
+                    tr.appendChild(td);
+                }
+                tbody.appendChild(tr);
+            }
+            table.appendChild(tbody);
+
+            // 랜덤값으로 지정된 칸에 이미지 삽입
+            tbody.rows[initRow].cells[initCol].setAttribute('onClick', 'clickHandler(this)');
+            document.images[initRow * 10 + initCol].src = '/src/dance.jpeg';
+
+        }
+        function clickHandler(target) {
+            const nextIdx = Math.floor(Math.random() * 100);
+            target.innerHTML='<img></img>';
+            target.removeAttribute('onClick');
+            document.images[nextIdx].src = '/src/dance.jpeg';
+            
+            const table = document.getElementsByTagName('table')[0];
+            table.rows[Math.floor(nextIdx / 10)].cells[nextIdx % 10].setAttribute('onClick', 'clickHandler(this)');
+        }
+    </script>
+    <style>
+        td {
+            width: 50px;    height: 50px;
+            border: 1px solid black;
+        }
+        img {
+            max-height: 100%;
+        }
+        table { border-collapse: collapse; }
+    </style>
+</head>
+<body>
+    <h3>마우스 클릭 연습</h3>
+    <hr>
+    <table>
+    </table>
+    <script>
+        createTable();
+    </script>
+</body>
+</html>
