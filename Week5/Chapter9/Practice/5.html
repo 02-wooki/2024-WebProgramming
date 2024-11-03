@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 연습</title>
+    <script>
+        function bgColorHandler(target) {
+            const red = Math.floor(Math.random() * 256);
+            const blue = Math.floor(Math.random() * 256);
+            const green = Math.floor(Math.random() * 256);
+
+            target.style.backgroundColor=`rgb(${red}, ${green}, ${blue})`;
+        }
+    </script>
+</head>
+<body ondblclick="bgColorHandler(this)" style="height: 100vh;">
+    <h3>바탕 아무 곳에나 더블 클릭</h3>
+    <hr>
+    <p>바탕 아무 곳이나 더블클릭하면 배경색이 랜덤하게 변합니다.</p>
+</body>
+</html>
