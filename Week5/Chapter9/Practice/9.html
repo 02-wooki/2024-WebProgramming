@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmouseover과 onmouseout</title>
+    <script>
+        function mouseOverHandler(target, e) {
+            const div = target.nextElementSibling;
+            div.style.visibility = 'visible';
+            div.style.left = `${e.x}px`;
+            div.style.top = `${e.y}px`;
+        }
+        function mouseOutHandler(target, e) {
+            const div = target.nextElementSibling;
+            div.style.visibility = 'hidden';
+        }
+    </script>
+    <style>
+        div { 
+            visibility: hidden;
+            position: absolute;
+
+            border: 1px solid gray;
+            background-color: white;
+            padding: 5px;
+            width: 200px;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <h3>아이템에 마우스를 올리면 설명 출력</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul>
+        <li onmouseover="mouseOverHandler(this, event)" onmouseout="mouseOutHandler(this, event)">자전거로 대한민국 일주</li>
+        <div id="a">빨간자전거를 타고 서울, 대전, 대구, 부산 찍고 목포, 인천을 거쳐 달린다</div>
+        <li onmouseover="mouseOverHandler(this, event)" onmouseout="mouseOutHandler(this, event)">책 100권 읽기</li>
+        <div id="b">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, tenetur.</div>
+        <li onmouseover="mouseOverHandler(this, event)" onmouseout="mouseOutHandler(this, event)">철인 3종경기 준비</li>
+        <div id="c">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, iste?</div>
+        <li onmouseover="mouseOverHandler(this, event)" onmouseout="mouseOutHandler(this, event)">자바스크립트 정복</li>
+        <div id="d">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, laboriosam?</div>
+    </ul>
+</body>
+</html>
