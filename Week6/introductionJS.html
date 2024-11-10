@@ -1,0 +1,230 @@
+<html>
+<head>
+    <script>
+
+        // 초기화 함수
+        function init() {
+            setDocument();
+            setBody();
+        }
+
+        // head 설정
+        function setDocument() {
+            const html = document.getElementsByTagName('html')[0];
+            const head = document.getElementsByTagName('head')[0];
+            
+            html.setAttribute('lang', 'en');
+
+            document.doctype='html';
+            document.title='자기소개';
+            document.characterSet='UTF-8';
+        }
+
+        function setBody() {
+            const body = document.getElementsByTagName('body')[0];
+            body.innerHTML = `
+                <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            background-color: #eee;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        form {
+            display: flex;
+            width: 80%;
+            flex-direction: column;
+        }
+        form > input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ddd
+        }
+        form > input:focus, textarea:focus {
+            outline: 2px solid #7e9ee9;
+        }
+
+        .appContainer {
+            width: 80vw;
+            padding-top: 100px;
+        }
+        .floatSection {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px -2px #bbb;
+            margin-bottom: 20px;
+            padding: 30px;
+        }
+        .rowContainer {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            padding-left: 20px;  padding-right: 20px;
+        }
+        
+        .navbar {
+            width: calc(80vw - 60px);
+            justify-content: space-between;
+            padding: 0px 30px;
+            position: fixed;
+        }
+        .profilePic {
+            width: 160px;   height: 160px;
+            margin-right: 30px;
+
+            border-radius: 999px;
+
+            background-image: url('/src/IMG_1240.jpeg');
+            background-size: cover;
+            background-position-y: -20px;
+        }
+        .navContents {
+            display: flex;
+            flex-direction: row;
+        }
+        .navContents > a {
+            cursor: pointer;
+            margin-left: 15px;
+        }
+        .rowContainer > h4 {
+            margin-right: 20px;
+        }
+        .card {
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px -3px #000;
+            margin: 10px;
+        }
+        .card > img {
+            width: 100%;
+            border-radius: 20px;
+        }
+        .card-text {
+            border-top: 1px solid #eee;
+            padding: 10px;
+        }
+        .card-button-primary {
+            border: none;
+            background-color: #7e9ee9;
+            border-radius: 10px;
+            padding: 10px 14px;
+            color: white;
+            font-weight: 600;
+        }
+        .card-button-primary:active {
+            border: 3px solid #bfccea;
+        }
+        .card-button-secondary {
+            border: none;
+            background-color: #bfccea;
+            border-radius: 10px;
+            padding: 10px 14px;
+            color: black;
+        }
+        .card-button-secondary:active {
+            background-color: #94a6d1;
+        }
+    </style>
+
+    <!-- nav bar -->
+    <nav class="floatSection rowContainer navbar">
+        <h3>Wooki.</h3>
+        <div class="navContents">
+            <a style="font-weight: 600;" href="#about">about</a>
+            <a href="#skills">skills</a>
+            <a href="#portfolio">portfolio</a>
+            <a href="#contact">contact</a>
+        </div>
+    </nav>
+    <div class="appContainer">
+
+        <!-- about section -->
+        <section id="about" class="floatSection rowContainer">
+            <div class="profilePic"></div>
+            <div style="max-width: 50%;">
+                <h2 style="margin-bottom: 0px;">성현욱</h2>
+                <p style="margin-top: 5px; font-size: 0.8rem;">프론트엔드 개발자</p>
+                <p>저는 열정적인 프론트엔드 개발자입니다. 프론트엔드와 백엔드에 관심과 경험이 있으며, 현재 경성대학교 소프트웨어학과에서 공부하며 경험을 쌓고 있습니다.</p>
+            </div>
+        </section>
+
+        <!-- skills section -->
+         <section id="skills" class="floatSection">
+            <h2 style="text-align: center;">Skills</h2>
+            <table style="width: 100%; padding: 0px 30px;"><tbody><tr>
+                    <td>
+                        <div class="floatSection" style="text-align: center; margin-right: 10px;">
+                            <h4>프론트엔드</h4>
+                            <p>HTML, CSS, JavaScript, React</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="floatSection" style="text-align: center;">
+                            <h4>백엔드</h4>
+                            <p>NodeJs, Express</p>
+                        </div>
+                    </td>
+            </tr></tbody></table>
+         </section>
+
+        <!-- portfolio section -->
+        <section id="portfolio" class="floatSection">
+            <h2 style="text-align: center;">Portfolio</h2>
+            <table style="width: 100%; padding: 0px 30px;"><tbody><tr>
+                <td>
+                    <div class="card">
+                        <img src="/src/portfolioImg1.png" alt="">
+                        <div class="card-text">
+                            <h3>Todo 2024</h3>
+                            <p>프론트에 React, 백엔드에 NodeJS와 Express를 사용해 만든 Todo 웹 앱 (서버 중단됨)</p>
+                            <button onclick="location.href='https:02-wooki.github.io/todo2024'" class="card-button-primary">구경하기</button>
+                            <button onclick="location.href='https:github.com/02-wooki/todo2024'" class="card-button-secondary">Github</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <img src="/src/portfolioImg3.png" alt="">
+                        <div class="card-text">
+                            <h3>Memo 2024</h3>
+                            <p>메모 웹 앱 만들기 프로젝트에 프론트엔드로 참여하여 React 사용하여 개발 (서버 중단됨)</p>
+                            <button onclick="location.href='https:github.com/WinterMemoProject/memo-web'" class="card-button-secondary">Github</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <img src="/src/portfolioImg2.png" alt="">
+                        <div class="card-text">
+                            <h3>Mine Sweeper</h3>
+                            <p>바닐라 HTML, CSS, JS만 사용하여 개발한 지뢰찾기 게임</p>
+                            <button onclick="location.href='https:github.com/02-wooki/mineSweeper'" class="card-button-secondary">Github</button>
+                        </div>
+                    </div>
+                </td>
+            </tr></tbody></table>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="floatSection" style="display: flex; flex-direction: column; align-items: center;">
+           <h2 style="text-align: center;">Contact</h2>
+            <form method="post">
+                <input type="text" placeholder="이름">
+                <input type="text" placeholder="이메일">
+                <textarea placeholder="메시지" rows="5"></textarea>
+                <button type="submit" class="card-button-primary">제출</button>
+            </form>
+        </section>
+    </div>
+            `;
+        }
+    </script>
+</head>
+<body onload="init()">
+</body>
+</html>
