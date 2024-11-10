@@ -1,0 +1,202 @@
+<html>
+<head>
+    <script>
+
+        // 초기화 함수
+        function init() {
+            setDocument();
+            setBody();
+        }
+
+        // head 설정
+        function setDocument() {
+            const html = document.getElementsByTagName('html')[0];
+            const head = document.getElementsByTagName('head')[0];
+            
+            html.setAttribute('lang', 'en');
+
+            document.doctype='html';
+            document.title='자기소개';
+            document.characterSet='UTF-8';
+        }
+
+        function setBody() {
+            const body = document.getElementsByTagName('body')[0];
+            body.innerHTML = `
+            <style>
+        /* 기본 스타일 설정 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #333;
+        }
+
+        .profile-pic {
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 1.5rem auto;
+            object-fit: cover;
+        }
+
+        .about, .skills, .contact {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills-list {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+        }
+
+        .skills-list div {
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* 반응형 스타일 */
+        @media (max-width: 600px) {
+            .skills-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills-list div {
+                margin: 0.3rem 0;
+            }
+        }
+    </style>
+            <!-- 헤더 -->
+    <header>
+        <h1>Hyunwook Sung</h1>
+        <p>Software Engineer & Data Enthusiast</p>
+    </header>
+
+    <div class="container">
+
+        <!-- 자기소개 섹션 -->
+        <section class="about">
+            <h2 class="section-title">About Me</h2>
+            <img src="/src/IMG_1240.jpeg" alt="Profile Picture" class="profile-pic">
+            <p>
+                Hello! I’m Hyunwook Sung, a dedicated software engineer with a background in data engineering.
+                I am passionate about building efficient, scalable applications and enjoy solving complex problems
+                with simple and elegant solutions.
+            </p>
+        </section>
+
+        <!-- 기술 섹션 -->
+        <section class="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-list">
+                <div>Frontend Development</div>
+                <div>Backend Development</div>
+                <div>Data Engineering</div>
+            </div>
+        </section>
+
+        <!-- 연락처 섹션 -->
+        <section class="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+        <p>&copy; 2024 Hyunwook Sung. All rights reserved.</p>
+    </footer>
+            `;
+        }
+    </script>
+</head>
+<body onload="init()">
+</body>
+</html>
