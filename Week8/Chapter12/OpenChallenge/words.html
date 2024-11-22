@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영단어 모두 보기</title>
+    <script>
+        function init() {
+            let cookieStr = opener.document.cookie.split(';');
+            let cookies = [];
+            for (let pair of cookieStr) {
+                let unit = pair.trim().split('=');
+                if (unit[1])
+                    cookies.push({ 'name': unit[0], 'value': unescape(unit[1]) });
+            }
+
+            const ol = document.getElementsByTagName('ol')[0];
+            for(let cookie of cookies) {
+                const li = document.createElement('li');
+                const namediv = document.createElement('div');
+                const valuediv = document.createElement('div');
+
+                li.style.display = 'flex';
+                li.style.width = '400px';
+                li.style.justifyContent = 'space-between';
+
+                namediv.innerText = cookie['name'];
+                valuediv.innerText = cookie['value'];
+
+                li.append(namediv);
+                li.append(valuediv);
+                ol.append(li);
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+    <ol></ol>
+</body>
+</html>
