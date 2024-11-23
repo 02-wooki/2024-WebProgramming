@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세션 스토리지에서 읽기</title>
+    <script>
+        function loadHanlder() {
+            const name = document.getElementById('name').value;
+            const eainput = document.getElementById('ea');
+
+            let ea = sessionStorage.getItem(name);
+            if (!ea) {
+                alert('해당 항목이 없습니다.');
+                return null;
+            }
+            eainput.value = ea;
+        }
+    </script>
+</head>
+<body>
+    <h3>세션 스토리지에서 구입 리스트 검색</h3>
+    <hr>
+    <label>품목명: <input type="text" id="name"></label>
+    <label>개수: <input type="text" id="ea"></label><br>
+    <button onclick="loadHanlder()">검색</button>
+</body>
+</html>
