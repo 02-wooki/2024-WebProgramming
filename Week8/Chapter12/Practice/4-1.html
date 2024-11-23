@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일기 쓰기</title>
+    <script>
+        let date;
+        function init() {
+            date = new Date();
+            const p = document.getElementById('date');
+            p.innerText = `오늘 ${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일`
+        }
+        function saveHandler() {
+            const text = document.getElementById('text').value;
+            sessionStorage.setItem(`${date.getFullYear()}.${date.getMonth()}.${date.getDate()}`, text);
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h3>일기 쓰기</h3>
+    <hr>
+    <p id="date"></p>
+    <textarea id="text" cols="70" rows="10"></textarea><br>
+    <button onclick="saveHandler()">저장</button><a href="./4-2.html"><button>보기</button></a>
+</body>
+</html>

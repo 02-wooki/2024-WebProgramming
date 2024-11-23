@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택한 도시와 음식 보여주기</title>
+    <script>
+        function storageEvenHandler(e) {
+            const sect = document.getElementsByTagName('section')[0];
+            let city = localStorage.getItem('city');
+            let food = localStorage.getItem('food');
+            sect.innerHTML = `city=${city}<br>food=${food}`;
+        }
+    </script>
+</head>
+<body onload="window.addEventListener('storage', () => {storageEvenHandler()}, false)">
+    <h3>선택한 도시와 음식 보여주기</h3>
+    <hr>
+    <section style="border: 1px solid gray; padding: 10px;">
+    </section>
+</body>
+</html>
