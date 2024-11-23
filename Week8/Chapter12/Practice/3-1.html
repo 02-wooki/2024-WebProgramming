@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포스트잇</title>
+
+    <script>
+        function saveHandler() {
+            const title = document.getElementById('title').value;
+            const text = document.getElementById('text').value;
+
+            sessionStorage.setItem(title, text);
+        }
+    </script>
+</head>
+<body>
+    <h3>포스트잇</h3>
+    <hr>
+    <label>제목 <input type="text" id="title"></label><br>
+    <label>메모입력<br><textarea id="text" rows="6"></textarea></label><br>
+    <button onclick="saveHandler()">저장</button><a href="./3-2.html"><button>보기</button></a>
+</body>
+</html>

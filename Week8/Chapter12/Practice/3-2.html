@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포스트잇 출력</title>
+
+    <script>
+        function init() {
+            const ol = document.getElementById('lists');
+
+            for(let i = 0; i < sessionStorage.length; i++) {
+                let key = sessionStorage.key(i);
+                let value = sessionStorage.getItem(key);
+
+                const li = document.createElement('li');
+                li.innerHTML = `<div style="font-weight=700">${key}</div><div>${value}</div>`
+                li.style.display = 'flex';
+                li.style.justifyContent = 'space-between';
+
+                ol.append(li);
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h3>포스트잇 출력</h3>
+    <hr>
+    <ol id="lists" style="list-style-type: decimal;"></ol>
+</body>
+</html>
