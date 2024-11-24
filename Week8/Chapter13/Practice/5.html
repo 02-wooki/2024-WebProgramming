@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>워커 테스트</title>
+    <script>
+        function buttonHandler() {
+            let score = parseInt(prompt('점수를 입력하세요'));
+            let worker = new Worker('./5.js');
+            worker.postMessage(score);
+            worker.onmessage = (m) => {
+                const p = document.getElementById('score');
+                p.innerText = m.data;
+            }
+        }
+    </script>   
+</head>
+<body>
+    <h3>학점 메기기</h3>
+    <hr>
+    <button onclick="buttonHandler()">점수 입력</button>
+    <p id="score"></p>
+</body>
+</html>

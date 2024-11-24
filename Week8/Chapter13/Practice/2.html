@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오디오 재생</title>
+    <script>
+        const tracks = ['../src/easpa-Supernova.mp3', '../src/이영지-Small girl.mp3', '../src/NewJeans-Ditto.mp3'];
+        let now;
+        function playHanlder(target) {
+            const audio = document.getElementsByTagName('audio')[0];
+            now = target.parentNode.parentNode.rowIndex;
+            audio.src = tracks[now];
+
+            const tr = document.getElementsByTagName('tr');
+            for (let i = 0; i < tracks.length; i++)
+                tr[i].firstElementChild.style.color = 'black';
+            target.parentNode.previousElementSibling.style.color = 'blue';
+
+            audio.load();
+            audio.play();
+        }
+        function pauseHandler() {
+            const audio = document.getElementsByTagName('audio')[0];
+            audio.pause();
+        }
+    </script>
+</head>
+<body>
+    <h3>오디오 재생</h3>
+    <hr>
+    <audio controls></audio>
+    <table>
+        <tbody>
+            <tr>
+                <td>easpa-Supernova</td>
+                <td><button onclick="playHanlder(this)">재생</button></td>
+                <td><button onclick="pauseHandler()">중지</button></td>
+            </tr>
+            <tr>
+                <td>이영지-Small girl</td>
+                <td><button onclick="playHanlder(this)">재생</button></td>
+                <td><button onclick="pauseHandler()">중지</button></td>
+            </tr>
+            <tr>
+                <td>NewJeans-Ditto</td>
+                <td><button onclick="playHanlder(this)">재생</button></td>
+                <td><button onclick="pauseHandler()">중지</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
