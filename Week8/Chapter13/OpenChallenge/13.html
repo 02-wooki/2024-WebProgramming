@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오디오 리스트 연속 재생</title>
+    <script>
+        const tracks = ['../src/easpa-Supernova.mp3', '../src/이영지-Small girl.mp3', '../src/NewJeans-Ditto.mp3'];
+        let nowPlaying;
+        function audioPlayHandler() {
+            const target = document.getElementById('sources');
+            const audio = document.getElementsByTagName('audio')[0];
+            const nowStr = document.getElementById('nowPlaying');
+
+            const track = tracks[target.value];
+            nowPlaying = target.value;
+            nowStr.innerText = `${target.options[target.selectedIndex].text}를 재생합니다.`
+
+            audio.src = track;
+            audio.load();
+            audio.play();
+        }
+        function audioAutoPlayHandler() { 
+            const audio = document.getElementsByTagName('audio')[0];
+            
+            nowPlaying = (nowPlaying + 1) % tracks.length;
+            const track = tracks[nowPlaying];
+
+            audio.src = track;
+            audio.load();
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <h3>오디오 리스트 연속 재생</h3>
+    <hr>
+    <p>처음 play 버튼을 누르면 리스트에 있는 곡이 연속하여 자동 재생 됩니다. 마우스로 다른 곡을 선택하면 곡이 바뀝니다. next 버튼을 누르면 다음 곡으로 넘어갑니다.</p>
+    <hr>
+    <audio onended="audioAutoPlayHandler()" controls></audio>
+    <br>
+    <select id="sources" size="3">
+        <option value="0" selected>easpa-Supernova</option>
+        <option value="1">이영지-Small girl</option>
+        <option value="2">NewJeans-Ditto</option>
+    </select>
+    <button onclick="audioPlayHandler()">Play</button><button onclick="audioAutoPlayHandler()">next</button>
+    <p id="nowPlaying">현재 연주되는 곡명이 보입니다.</p>
+</body>
+</html>
