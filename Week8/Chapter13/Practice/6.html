@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>워커 태스크 만들기</title>
+    <script>
+        function multipleHanlder() {
+            const input = document.getElementsByTagName('input');
+            let num = [];
+            
+            num.push(parseInt(input[0].value));
+            num.push(parseInt(input[1].value));
+
+            const worker = new Worker('./6.js');
+            worker.postMessage(num);
+            worker.onmessage = e => {
+                input[2].value = e.data;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>곱셈하기</h3>
+    <hr>
+    <input type="text"> x
+    <input type="text">
+    <button onclick="multipleHanlder()">곱하기</button>
+    <input type="text">
+</body>
+</html>
