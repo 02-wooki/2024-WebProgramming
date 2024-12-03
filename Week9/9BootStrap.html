@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>자바스크립트 문법기초</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container my-5">
+        <!-- 1. 변수 -->
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                1. 변수
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+            <div class="card-body">
+              
+              <!-- 1.1 변수 만들기 -->
+              <div class="card">
+                <div class="card-header" id="headingOneOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneOne" aria-expanded="false" aria-controls="collapseOneOne">
+                      1.1 변수 만들기
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseOneOne" class="collapse" aria-labelledby="headingOneOne" data-bs-parent="#collapseOne">
+                  <div class="card-body">
+      
+                    <!-- 1.1.1 나이가 담긴 변수 -->
+                    <div class="card">
+                      <div class="card-header" id="headingOneOneOne">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneOneOne" aria-expanded="false" aria-controls="collapseOneOneOne">
+                            1.1.1 나이가 담긴 변수
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseOneOneOne" class="collapse" aria-labelledby="headingOneOneOne" data-bs-parent="#collapseOneOne">
+                        <div class="card-body">
+                            <div>예제 1: 여러분의 나이가 담긴 변수 age를 만들어 주세요</div>
+                            <div class="scriptContainer"><script>
+                                document.write('var age = 23');
+                            </script></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- 1.1.2 이름과 나이가 담긴 변수 -->
+                    <div class="card">
+                      <div class="card-header" id="headingOneOneTwo">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneOneTwo" aria-expanded="false" aria-controls="collapseOneOneTwo">
+                            1.1.2 이름과 나이가 담긴 변수
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseOneOneTwo" class="collapse" aria-labelledby="headingOneOneTwo" data-bs-parent="#collapseOneOne">
+                        <div class="card-body">
+                          <div>예제 2: 여러분의 이름과 나이를 저장한 변수를 만들어 주세요.</div>
+                          <div class="scriptContainer">
+                              <script>
+                                  document.write(`var name = '성현욱'<br>var id = 23`);
+                              </script>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+      
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 1.2 기본연산자 -->
+              <div class="card">
+                <div class="card-header" id="headingOneTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneTwo" aria-expanded="false" aria-controls="collapseOneTwo">
+                      1.2 기본연산자
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseOneTwo" class="collapse" aria-labelledby="headingOneTwo" data-bs-parent="#collapseOne">
+                  <div class="card-body">
+                    기본연산자에 대한 설명이 여기에 들어갑니다.
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 1.3 형변환 -->
+              <div class="card">
+                <div class="card-header" id="headingOneThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneThree" aria-expanded="false" aria-controls="collapseOneThree">
+                      1.3 형변환
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseOneThree" class="collapse" aria-labelledby="headingOneThree" data-bs-parent="#collapseOne">
+                  <div class="card-body">
+                    형변환에 대한 설명이 여기에 들어갑니다.
+                  </div>
+                </div>
+              </div>
+      
+              <!-- 1.4 제어문 -->
+              <div class="card">
+                <div class="card-header" id="headingOneFour">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneFour" aria-expanded="false" aria-controls="collapseOneFour">
+                      1.4 제어문
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseOneFour" class="collapse" aria-labelledby="headingOneFour" data-bs-parent="#collapseOne">
+                  <div class="card-body">
+      
+                    <!-- 1.4.1 if -->
+                    <div class="card">
+                      <div class="card-header" id="headingOneFourOne">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneFourOne" aria-expanded="false" aria-controls="collapseOneFourOne">
+                            1.4.1 if
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseOneFourOne" class="collapse" aria-labelledby="headingOneFourOne" data-bs-parent="#collapseOneFour">
+                        <div class="card-body">
+                          if 조건문에 대한 설명이 여기에 들어갑니다.
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <!-- BootStrap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

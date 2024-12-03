@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>자바스크립트 문법기초</title>
+    <style>
+        body {
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        details {
+            border-radius: 40px;
+            padding: 20px 50px; margin: 10px 0px;
+            width: 80%;
+            box-shadow: 0px 0px 10px -7px #eee;
+            background-color: white;
+            transition: all 1s ease;
+            cursor: pointer;
+        }
+        summary {
+            font-weight: 600;
+            font-size: 1.1rem;
+            list-style-type: none;
+        }
+        .scriptContainer {
+            padding: 20px 40px;
+            border-radius: 30px;
+            margin: 10px 0px;
+            background-color: #e0eaef;
+            font-weight: 500;
+        }
+        details > details {
+            border-top: 1px solid lightgray;
+            border-radius: 0px;
+            width: calc(80% - 10px);
+            margin-top: 25px;
+            padding-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <details>
+        <summary>1. 변수</summary>
+        <details>
+            <summary>1.1 변수 만들기</summary>
+            <details>
+                <summary>01-1 나이가 담긴 변수</summary>
+                <div>예제 1: 여러분의 나이가 담긴 변수 age를 만들어 주세요</div>
+                <div class="scriptContainer"><script>
+                    document.write('var age = 23');
+                </script></div>
+            </details>
+            <details>
+                <summary>01-2 이름과 나이가 담긴 변수</summary>
+                <div>예제 2: 여러분의 이름과 나이를 저장한 변수를 만들어 주세요.</div>
+                <div class="scriptContainer">
+                    <script>
+                        document.write(`var name = '성현욱'<br>var id = 23`);
+                    </script>
+                </div>
+            </details>
+        </details>
+        <details>
+            <summary>1.2 기본연산자</summary>
+        </details>
+        <details>
+            <summary>1.3 형변환</summary>
+        </details>
+        <details>
+            <summary>1.4 제어문</summary>
+            <details>
+                <summary>04-1 if</summary>
+                <div>예제 1: </div>
+            </details>
+        </details>
+    </details>
+</body>
+</html>
