@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta 소개 페이지</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+<!-- 네비게이션 바 -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="https://about.meta.com/ko/">Meta</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#vision">Vision</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#culture">Culture</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 회사 소개 섹션 -->
+<section id="about" class="container my-5">
+    <h2 class="text-3xl font-bold text-center mb-4">회사 소개</h2>
+    <p class="text-center text-lg">
+        Meta는 전 세계의 사람들을 연결하고 소통할 수 있도록 돕는 글로벌 기술 기업입니다.
+        2004년에 설립된 Facebook에서 시작하여 현재는 Instagram, WhatsApp 등 다양한 플랫폼을 운영하며,
+        메타버스를 통해 현실과 가상을 연결하는 미래 기술을 선도하고 있습니다.
+    </p>
+    <p class="text-center text-lg">
+        Meta는 사용자 경험을 중시하며, 사회적 가치를 창출하는 것을 목표로 합니다. 인공지능, 가상현실(VR), 증강현실(AR) 등의
+        혁신적인 기술 개발을 통해 인간의 연결성을 강화하고 있습니다.
+    </p>
+</section>
+
+<!-- 제품 및 서비스 섹션 -->
+<section id="products" class="bg-gray-200 py-5">
+    <div class="container">
+        <h2 class="text-3xl font-bold text-center mb-4">제품 및 서비스</h2>
+        <div class="row">
+            <!-- Facebook 카드 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Facebook</h5>
+                        <p class="card-text mb-4 mt-4">
+                            세계 최대의 소셜 네트워크로, 사용자들이 소식을 공유하고 친구와 소통할 수 있는 플랫폼입니다.
+                            이벤트 관리, 그룹 기능, 라이브 스트리밍 등 다양한 기능을 제공합니다.
+                        </p>
+                        <a href="https://www.facebook.com" target="_blank" class="btn btn-primary">Facebook 방문</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Instagram 카드 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Instagram</h5>
+                        <p class="card-text mb-4 mt-4">
+                            사진과 영상을 공유하는 소셜 미디어 플랫폼으로, 개인의 창의성을 표현할 수 있는 공간입니다.
+                            스토리 기능과 리일스를 통해 짧은 동영상 콘텐츠를 쉽게 제작하고 공유할 수 있습니다.
+                        </p>
+                        <a href="https://www.instagram.com" target="_blank" class="btn btn-primary">Instagram 방문</a>
+                    </div>
+                </div>
+            </div>
+            <!-- WhatsApp 카드 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">WhatsApp</h5>
+                        <p class="card-text mb-4 mt-4">
+                            전 세계에서 가장 인기 있는 메시징 앱 중 하나로, 빠르고 안전한 메시지와 음성/영상 통화를 제공합니다.
+                            그룹 채팅과 파일 공유 기능도 강력합니다.
+                        </p>
+                        <a href="https://www.whatsapp.com" target="_blank" class="btn btn-primary">WhatsApp 방문</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 비전과 목표 섹션 -->
+<section id="vision" class="container my-5">
+    <h2 class="text-3xl font-bold text-center mb-4">비전과 목표</h2>
+    <p class="text-center text-lg">
+        Meta의 비전은 사람들이 어디서나 자유롭게 연결되고, 현실과 가상을 넘나들며 풍부한 경험을 할 수 있는 메타버스를 구축하는 것입니다.
+        인간 중심의 기술을 개발하며, 모두가 동등하게 디지털 세계에 접근할 수 있는 환경을 조성하고자 합니다.
+    </p>
+</section>
+
+<!-- 기업 문화 섹션 -->
+<section id="culture" class="bg-gray-200 py-5">
+    <div class="container">
+        <h2 class="text-3xl font-bold text-center mb-4">기업 문화</h2>
+        <p class="text-center text-lg">
+            Meta는 혁신과 다양성을 핵심 가치로 삼고, 개방적이고 협력적인 기업 문화를 조성합니다.
+            직원들이 창의력을 발휘할 수 있도록 자유로운 분위기를 제공하며, 글로벌 사회에 긍정적인 영향을 미치는 프로젝트를 추진합니다.
+        </p>
+    </div>
+</section>
+
+<!-- 연락처 섹션 -->
+<section id="contact" class="container my-5">
+    <h2 class="text-3xl font-bold text-center mb-4">연락처</h2>
+    <p class="text-center text-lg">
+        Meta에 대한 문의 사항은 <a href="mailto:info@meta.com" class="text-blue-500 underline">info@meta.com</a>으로 연락해주세요.
+    </p>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
